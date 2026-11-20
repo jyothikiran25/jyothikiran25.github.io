@@ -266,6 +266,18 @@ footer a:hover{color:#fff}
 .st-tag.live{border-color:var(--blue);color:#8fb0ff}
 .st-tag.upcoming{background:var(--red);border-color:var(--red);color:#fff}
 @media (max-width:700px){.st-row{grid-template-columns:56px 1fr;gap:8px 16px}.pos{font-size:22px;grid-row:span 3}.st-date{text-align:left}.st-tag{justify-self:start}}
+.hw{color:#ff3b46}.sw{color:#4a86ff}
+.kind{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;padding:2px 7px;margin-right:10px;border:1px solid currentColor;vertical-align:1px}
+.kind.hw{color:#ff3b46;background:rgba(227,18,27,.1)}.kind.sw{color:#4a86ff;background:rgba(31,91,255,.1)}
+.proj.hwp .proj-num{border-color:var(--red)!important;color:var(--red)!important}
+.proj.swp .proj-num{border-color:var(--blue)!important;color:var(--blue)!important}
+.proj.hwp .meta{color:#ff5a63}.proj.swp .meta{color:#6f9bff}
+.proj.hwp .proj-media{box-shadow:10px 10px 0 var(--red)!important}.proj.swp .proj-media{box-shadow:10px 10px 0 var(--blue)!important}
+.proj.hwp em{color:#ff4d57}.proj.swp em{color:#6f9bff}
+.proj.hwp ul li::before{background:var(--red)}.proj.swp ul li::before{background:var(--blue)}
+.proj.hwp h3{text-shadow:0 0 30px rgba(227,18,27,.25)}.proj.swp h3{text-shadow:0 0 30px rgba(31,91,255,.3)}
+.forge-card.hwp::before{background:linear-gradient(90deg,var(--red) 0 9px,transparent 9px 13px,#ff6b72 13px)!important}
+.forge-card.hwp{border-color:rgba(227,18,27,.35)}
 /* responsive */
 @media (max-width:900px){
   nav ul{position:fixed;inset:0;background:var(--paper);color:var(--ink);flex-direction:column;justify-content:center;gap:30px;opacity:0;visibility:hidden;transition:.3s}
@@ -325,7 +337,7 @@ footer a:hover{color:#fff}
   <div class="kicker mono">India · ECE '28</div>
   <h1>Jyothikiran</h1>
   <div class="model"><b><span>GAME SYSTEMS</span></b><i><span class="hw">HARDWARE</span> + <span class="sw">SOFTWARE</span></i></div>
-  <p class="sub">An electronics student <b>building game systems in both hardware and software</b> — from secure silicon and PCBs to game engines and enemies that learn.</p>
+  <p class="sub">An electronics student <b>building game systems in both <span class="hw">hardware</span> and <span class="sw">software</span></b> — from secure silicon and PCBs to game engines and enemies that learn.</p>
   <div class="spec-card"><b>SPEC SHEET</b>ENGINE · UE5 / C++<br>CHASSIS · VERILOG RTL<br>ELECTRICS · KICAD PCB<br>AI · PPO / RL<br>FINISH · CADENCE 90 NM</div>
   <div class="speedo"><span id="kmh">000</span><small>KM/H · LIVE</small></div>
   <button class="boost" id="boost" aria-label="Boost the cars">BOOST ⟫</button>
@@ -342,17 +354,17 @@ footer a:hover{color:#fff}
     <h2 class="reveal">From <em>logic gates</em> to <em class="b">living game worlds.</em></h2>
     <div class="about-grid">
       <div class="reveal">
-        <p>I'm an <strong>Electronics &amp; Communication Engineering</strong> student (2028 batch). My goal is to <strong>create game systems in both hardware and software</strong> — the silicon and boards that games run on, and the engines, mechanics and AI that make them fun.</p>
-        <p>On the hardware side I work in <strong>digital VLSI</strong>: RTL design, verification, and the Cadence flow from synthesis to a DRC-clean layout.</p>
-        <p>My favourite problems sit where hardware meets security: scan chains that leak secrets, ciphers that need to fit in silicon, boards that have to route cleanly on two layers.</p>
-        <p>On the software side I've spent two years building games in <strong>Unreal Engine 5</strong> and <strong>Unity</strong>. Right now I'm using <strong>reinforcement learning</strong> to make enemies adapt to the player instead of repeating the same moves.</p>
+        <p>I'm an <strong>Electronics &amp; Communication Engineering</strong> student (2028 batch). My goal is to <strong>create game systems in both <span class="hw">hardware</span> and <span class="sw">software</span></strong> — the silicon and boards that games run on, and the engines, mechanics and AI that make them fun.</p>
+        <p>On the <span class="hw">hardware</span> side I work in <strong>digital VLSI</strong>: RTL design, verification, and the Cadence flow from synthesis to a DRC-clean layout.</p>
+        <p>My favourite problems sit where <span class="hw">hardware</span> meets security: scan chains that leak secrets, ciphers that need to fit in silicon, boards that have to route cleanly on two layers.</p>
+        <p>On the <span class="sw">software</span> side I've spent two years building games in <strong>Unreal Engine 5</strong> and <strong>Unity</strong>. Right now I'm using <strong>reinforcement learning</strong> to make enemies adapt to the player instead of repeating the same moves.</p>
       </div>
       <dl class="facts reveal mono">
         <div><dt>Motive</dt><dd>Game systems · HW + SW</dd></div>
-        <div><dt>Hardware</dt><dd>Digital VLSI · HW security</dd></div>
+        <div><dt><span class="hw">Hardware</span></dt><dd>Digital VLSI · HW security</dd></div>
         <div><dt>Degree</dt><dd>B.Tech ECE · 2024–28</dd></div>
         <div><dt>Flow</dt><dd>RTL → GDSII (Cadence)</dd></div>
-        <div><dt>Software</dt><dd>UE5 · Unity · RL enemies</dd></div>
+        <div><dt><span class="sw">Software</span></dt><dd>UE5 · Unity · RL enemies</dd></div>
         <div><dt>Now</dt><dd>AES-128 · SHA in Verilog</dd></div>
         <div><dt>Based in</dt><dd>India · IST</dd></div>
       </dl>
@@ -406,10 +418,10 @@ footer a:hover{color:#fff}
     <div class="label mono reveal"><b class="num">04</b> Pit lane</div>
     <h2 class="reveal">Currently <em>on the dyno.</em></h2>
     <div class="forge">
-      <div class="forge-card reveal">
-        <div class="status mono"><i></i>In progress</div>
+      <div class="forge-card reveal hwp">
+        <div class="status mono"><i></i>In progress <span class="kind hw"><span class="hw">HARDWARE</span></span></div>
         <h3>AES-128 in Verilog</h3>
-        <p>A from-scratch hardware implementation of the AES-128 block cipher — both encryption and decryption — written to understand every transform at gate level.</p>
+        <p>A from-scratch <span class="hw">hardware</span> implementation of the AES-128 block cipher — both encryption and decryption — written to understand every transform at gate level.</p>
         <div class="rounds" id="rounds"></div>
         <ul class="steps">
           <li>SubBytes · ShiftRows · MixColumns · AddRoundKey</li>
@@ -418,10 +430,10 @@ footer a:hover{color:#fff}
           <li>Checked against FIPS-197 test vectors</li>
         </ul>
       </div>
-      <div class="forge-card reveal">
-        <div class="status mono"><i></i>In progress</div>
+      <div class="forge-card reveal hwp">
+        <div class="status mono"><i></i>In progress <span class="kind hw"><span class="hw">HARDWARE</span></span></div>
         <h3>SHA hash cores</h3>
-        <p>Hardware cores for the Secure Hash Algorithm family — message scheduling, compression rounds and padding — as companions to the AES engine for a small crypto block.</p>
+        <p><span class="hw">Hardware</span> cores for the Secure Hash Algorithm family — message scheduling, compression rounds and padding — as companions to the AES engine for a small crypto block.</p>
         <div class="hashbox"><input id="shaIn" value="jyothikiran" aria-label="Text to hash" spellcheck="false"><div class="mono" style="font-size:10px;color:var(--dim);margin-bottom:4px">SHA-256 (try it — computed live in your browser)</div><div class="out" id="shaOut">…</div></div>
         <ul class="steps">
           <li>Message schedule W[0..63]</li>
@@ -438,11 +450,11 @@ footer a:hover{color:#fff}
     <div class="label mono reveal"><b class="num">05</b> Selected projects</div>
     <h2 class="reveal">Race-bred <em>projects.</em></h2>
 
-    <article class="proj reveal">
+    <article class="proj reveal swp">
       <div>
         <div class="proj-num">01</div>
         <h3>GGJ — Desert Castle</h3>
-        <div class="meta mono">Unreal Engine 5.7 · C++ · Game jam</div>
+        <div class="meta mono"><span class="kind sw"><span class="sw">SOFTWARE</span></span>Unreal Engine 5.7 · C++ · Game jam</div>
         <p><em>Hack through a desert fortress to claim the Mask.</em> A third-person melee brawler against 16 AI brutes — I extended the C++ combat framework so imported Paragon characters actually fight.</p>
         <ul>
           <li>Fallback attack traces timed to montage length, with double-hit guard</li>
@@ -453,11 +465,11 @@ footer a:hover{color:#fff}
       </div>
       <div class="proj-media"><span class="tag mono">Gameplay</span><video id="ggjVid" src="assets/ggj.mp4" poster="assets/ggj.jpg" muted loop playsinline preload="metadata" aria-label="GGJ Desert Castle gameplay clip"></video></div>
     </article>
-    <article class="proj reveal">
+    <article class="proj reveal swp">
       <div>
         <div class="proj-num">02</div>
         <h3>Obstacle Runner</h3>
-        <div class="meta mono">Unreal Engine 5.7 · C++ · Level design</div>
+        <div class="meta mono"><span class="kind sw"><span class="sw">SOFTWARE</span></span>Unreal Engine 5.7 · C++ · Level design</div>
         <p><em>Dash, jump and wall-run across a village that won't stand still.</em> A third-person platformer built around one reusable C++ platform actor.</p>
         <ul>
           <li>AMovingPlatform: frame-rate-independent ping-pong motion and rotation</li>
@@ -468,11 +480,11 @@ footer a:hover{color:#fff}
       </div>
       <div class="proj-media"><span class="tag mono">Gameplay</span><video id="runVid" src="assets/runner.mp4" poster="assets/runner.jpg" muted loop playsinline preload="metadata" aria-label="Obstacle Runner gameplay clip"></video></div>
     </article>
-    <article class="proj reveal">
+    <article class="proj reveal hwp">
       <div>
         <div class="proj-num">03</div>
         <h3>State-Isolated Scan</h3>
-        <div class="meta mono">Hardware security · DFT · Cadence 90 nm</div>
+        <div class="meta mono"><span class="kind hw"><span class="hw">HARDWARE</span></span><span class="hw">Hardware</span> security · DFT · Cadence 90 nm</div>
         <p>Implemented and evaluated <em>State-Isolated Scan</em>, a secure, low-power scan architecture from a 2026 IEEE paper, against conventional scan on the ISCAS89 s27 benchmark — RTL to a DRC-clean layout.</p>
         <ul>
           <li>Separate ISR-a / ISR-b / OSR chains so shifting never touches real state</li>
@@ -509,11 +521,11 @@ footer a:hover{color:#fff}
         </svg>
       </div>
     </article>
-    <article class="proj reveal">
+    <article class="proj reveal hwp">
       <div>
         <div class="proj-num">04</div>
         <h3>Air Mouse — 3-DoF Motion Input</h3>
-        <div class="meta mono">PCB design · KiCad · Toward AR / VR pointing</div>
+        <div class="meta mono"><span class="kind hw"><span class="hw">HARDWARE</span></span>PCB design · KiCad · Toward AR / VR pointing</div>
         <p><em>Point at the world, not the desk.</em> A wireless, battery-powered handheld that turns hand motion into input. Its 6-axis IMU (accelerometer + gyroscope) is the same sensor class that 3-DoF VR pointers like the Daydream controller used for rotation tracking. A teammate drew the schematic; <em>I did the full layout</em> — placement, hand routing, and a guide to every route.</p>
         <ul>
           <li>LSM6DSL 6-axis IMU (accel + gyro) for 3-DoF rotation tracking</li>
@@ -521,7 +533,7 @@ footer a:hover{color:#fff}
           <li>Left / right / middle buttons for select, grab and menu actions</li>
           <li>USB-C, MCP73831 Li-ion charger and AP2112K 3.3 V LDO for untethered use</li>
           <li>Almost unbroken B.Cu GND plane, antenna keep-out, Gerbers ready</li>
-          <li>Scope today: PCB hardware only — rotation only (no positional tracking), no magnetometer, firmware not yet written</li>
+          <li>Scope today: PCB <span class="hw">hardware</span> only — rotation only (no positional tracking), no magnetometer, firmware not yet written</li>
         </ul>
         <div class="roadmap">
           <div class="rm on"><span class="mono">Built</span><b>Motion-input board</b><p>2-layer layout with IMU, wireless MCU, buttons and Li-ion power.</p></div>
@@ -580,11 +592,11 @@ footer a:hover{color:#fff}
       <div class="car-nav"><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button><div class="dots" id="dots"></div></div>
     
     <div style="border-top:1px solid var(--line);margin-top:70px"></div>
-    <article class="proj reveal" style="border-top:0;padding-top:20px">
+    <article class="proj reveal swp" style="border-top:0;padding-top:20px">
       <div>
         <div class="status mono"><i></i>Ongoing research</div>
         <h3>Adaptive RL Opponents</h3>
-        <div class="meta mono">Unity 6 · ML-Agents · PPO · Player experience</div>
+        <div class="meta mono"><span class="kind sw"><span class="sw">SOFTWARE</span></span>Unity 6 · ML-Agents · PPO · Player experience</div>
         <p><em>Enemies that don't repeat themselves.</em> Scripted game AI falls into patterns players learn and exploit. This project uses RL so opponents adapt to each player and keep varying their behaviour.</p>
         <p>Three AI race cars with distinct "personalities" — Speedster, Technician, Rocket — trained with PPO through a five-stage curriculum, then benchmarked against a classic pure-pursuit scripted bot <em>driving the identical car</em>.</p>
         <ul>
@@ -619,11 +631,11 @@ footer a:hover{color:#fff}
 <section id="hackathon">
   <div class="wrap">
     <div class="label mono reveal"><b class="num">07</b> Hackathon</div>
-    <article class="proj reveal">
+    <article class="proj reveal swp">
       <div>
         <div class="proj-num">SIH</div>
         <h3>PRAHARI 2.0</h3>
-        <div class="meta mono">Smart India Hackathon 2026 · Team project</div>
+        <div class="meta mono"><span class="kind sw"><span class="sw">SOFTWARE</span></span>Smart India Hackathon 2026 · Team project</div>
         <p>AI-based detection and classification of industrial fires and persistent thermal sources from satellite data, built for an NTRO problem statement at SIH 2026.</p>
         <ul>
           <li>NASA FIRMS hotspots matched to facilities (CPCB hazard categories, OSM fallback)</li>
@@ -679,7 +691,7 @@ footer a:hover{color:#fff}
     <h2>P Jyothikiran</h2>
     <p class="mono" style="color:var(--dim)">ECE · Digital VLSI · github.com/jyothikiran25</p>
     <h4>About me</h4>
-    <p>Electronics &amp; Communication Engineering student who wants to create game systems in both hardware and software — focused on digital VLSI and hardware security, with hands-on Cadence RTL-to-GDSII experience, PCB layout, and two years of game development with C++, C# and reinforcement learning.</p>
+    <p>Electronics &amp; Communication Engineering student who wants to create game systems in both <span class="hw">hardware</span> and <span class="sw">software</span> — focused on digital VLSI and <span class="hw">hardware</span> security, with hands-on Cadence RTL-to-GDSII experience, PCB layout, and two years of game development with C++, C# and reinforcement learning.</p>
     <h4>Experience</h4>
     <div class="row"><b>Intern — ISRO, Vikram Sarabhai Space Centre (upcoming)</b></div>
     <div class="row" style="margin-top:8px"><b>Executive Member — IOTA Club</b><span>2026 – Present</span></div>
@@ -688,9 +700,9 @@ footer a:hover{color:#fff}
     <div class="row"><b>B.Tech, Electronics &amp; Communication Engineering</b><span>2024 – 2028</span></div>
     <h4>Technical skills</h4>
     <ul>
-      <li><b>Hardware:</b> Verilog, testbenches, DFT &amp; scan, Cadence Genus / Innovus / Virtuoso, NCLaunch</li>
+      <li><b><span class="hw">Hardware</span>:</b> Verilog, testbenches, DFT &amp; scan, Cadence Genus / Innovus / Virtuoso, NCLaunch</li>
       <li><b>PCB &amp; embedded:</b> KiCad, 2-layer layout, USB-C power, ESP32-S3, 8051, 8086 assembly</li>
-      <li><b>Software:</b> Python, C++, C#, PyTorch, XGBoost, Unity ML-Agents, Unreal Engine 5</li>
+      <li><b><span class="sw">Software</span>:</b> Python, C++, C#, PyTorch, XGBoost, Unity ML-Agents, Unreal Engine 5</li>
     </ul>
     <h4>Key projects</h4>
     <ul>

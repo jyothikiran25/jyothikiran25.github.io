@@ -278,6 +278,39 @@ footer a:hover{color:#fff}
 .proj.hwp h3{text-shadow:0 0 30px rgba(227,18,27,.25)}.proj.swp h3{text-shadow:0 0 30px rgba(31,91,255,.3)}
 .forge-card.hwp::before{background:linear-gradient(90deg,var(--red) 0 9px,transparent 9px 13px,#ff6b72 13px)!important}
 .forge-card.hwp{border-color:rgba(227,18,27,.35)}
+/* ---- flashy contact: start lights + engines ---- */
+.contact{padding-top:110px}
+.startgrid{display:flex;flex-direction:column;align-items:center;gap:14px;margin:6px auto 30px}
+.glights{display:flex;gap:12px;padding:12px 16px;background:#05070d;border:1px solid rgba(255,255,255,.12);border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.glights i{width:clamp(26px,4.4vw,40px);aspect-ratio:1;border-radius:50%;background:#1a1d26;box-shadow:inset 0 0 8px #000;animation:glight 4.8s infinite}
+.glights i:nth-child(1){animation-delay:0s}.glights i:nth-child(2){animation-delay:.45s}.glights i:nth-child(3){animation-delay:.9s}.glights i:nth-child(4){animation-delay:1.35s}.glights i:nth-child(5){animation-delay:1.8s}
+@keyframes glight{0%{background:#1a1d26;box-shadow:inset 0 0 8px #000}2%,46%{background:var(--red);box-shadow:0 0 22px var(--red),0 0 60px rgba(227,18,27,.6),inset 0 0 6px rgba(255,255,255,.5)}50%,100%{background:#1a1d26;box-shadow:inset 0 0 8px #000}}
+.glights i:nth-child(2){animation-name:glight2}.glights i:nth-child(3){animation-name:glight3}.glights i:nth-child(4){animation-name:glight4}.glights i:nth-child(5){animation-name:glight5}
+@keyframes glight2{0%{background:#1a1d26}2%,37%{background:var(--red);box-shadow:0 0 22px var(--red),0 0 60px rgba(227,18,27,.6)}40%,100%{background:#1a1d26;box-shadow:inset 0 0 8px #000}}
+@keyframes glight3{0%{background:#1a1d26}2%,28%{background:var(--red);box-shadow:0 0 22px var(--red),0 0 60px rgba(227,18,27,.6)}31%,100%{background:#1a1d26;box-shadow:inset 0 0 8px #000}}
+@keyframes glight4{0%{background:#1a1d26}2%,18%{background:var(--red);box-shadow:0 0 22px var(--red),0 0 60px rgba(227,18,27,.6)}21%,100%{background:#1a1d26;box-shadow:inset 0 0 8px #000}}
+@keyframes glight5{0%{background:#1a1d26}2%,9%{background:var(--red);box-shadow:0 0 22px var(--red),0 0 60px rgba(227,18,27,.6)}12%,100%{background:#1a1d26;box-shadow:inset 0 0 8px #000}}
+.gotext{font-family:var(--wide);font-size:clamp(18px,2.4vw,26px);letter-spacing:.3em;color:#3dff8a;text-shadow:0 0 18px #3dff8a,0 0 40px rgba(61,255,138,.6);opacity:0;animation:go 4.8s infinite}
+@keyframes go{0%,47%{opacity:0;transform:scale(.6)}50%{opacity:1;transform:scale(1.25)}62%{opacity:1;transform:scale(1)}78%,100%{opacity:0;transform:scale(1)}}
+.engines{display:flex;flex-direction:column;align-items:center;gap:6px;max-width:none!important;margin:0 auto 18px!important}
+.engines .se1{font-size:clamp(18px,2.6vw,30px);letter-spacing:.42em;color:#c9d4ee}
+.engines .se2{position:relative;font-size:clamp(46px,9vw,128px);line-height:1;letter-spacing:.06em;font-style:italic;transform:skewX(-10deg);
+  background:linear-gradient(100deg,#fff 0%,#fff 38%,#8fb4ff 46%,#ffffff 50%,#ff5a63 54%,#fff 62%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 2.6s linear infinite;filter:drop-shadow(0 0 22px rgba(31,91,255,.55)) drop-shadow(6px 0 0 rgba(227,18,27,.35))}
+@keyframes shine{from{background-position:120% 0}to{background-position:-20% 0}}
+.engines .se2::after{content:attr(data-t);position:absolute;inset:0;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.35);transform:translateX(-14px);opacity:.5;animation:ghost 1.2s ease-in-out infinite;pointer-events:none}
+@keyframes ghost{0%,100%{transform:translateX(-14px);opacity:.15}50%{transform:translateX(-30px);opacity:.45}}
+.letsrace{position:relative;display:inline-block;margin:10px auto 26px}
+.lr-in{display:inline-flex;transform:skewX(-14deg);box-shadow:0 14px 40px rgba(0,0,0,.45);animation:rev 1.6s ease-in-out infinite}
+.lr-in span{display:inline-block;font-family:var(--wide);font-size:clamp(20px,3.2vw,40px);letter-spacing:.18em;padding:12px 26px}
+.lr-b{background:var(--blue);color:#fff}.lr-r{background:var(--red);color:#fff}
+@keyframes rev{0%,100%{transform:skewX(-14deg) translateX(0)}50%{transform:skewX(-14deg) translateX(8px)}}
+.streaks{position:absolute;right:100%;top:50%;width:min(36vw,380px);height:70%;transform:translateY(-50%);margin-right:14px;
+  background:repeating-linear-gradient(180deg,transparent 0 7px,rgba(255,255,255,.55) 7px 9px,transparent 9px 16px);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 70%);mask-image:linear-gradient(90deg,transparent,#000 70%);animation:streak .5s linear infinite}
+@keyframes streak{0%{background-position:0 0;opacity:.5}50%{opacity:1}100%{background-position:0 16px;opacity:.5}}
+.race-sub{color:#b9c3d8;margin:0 auto 30px;max-width:46ch}
+@media (prefers-reduced-motion:reduce){.glights i,.gotext,.engines .se2,.engines .se2::after,.lr-in,.streaks{animation:none}.gotext{opacity:1}}
 /* responsive */
 @media (max-width:900px){
   nav ul{position:fixed;inset:0;background:var(--paper);color:var(--ink);flex-direction:column;justify-content:center;gap:30px;opacity:0;visibility:hidden;transition:.3s}
@@ -671,7 +704,13 @@ footer a:hover{color:#fff}
 <section id="contact" class="contact">
   <div class="wrap">
     <div class="label mono reveal"><b class="num">08</b> Contact</div>
-    <h2 class="reveal">Let's go <em>racing.</em></h2>
+    <div class="startgrid reveal" aria-hidden="true">
+      <div class="glights"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="gotext">GO!</div>
+    </div>
+    <h2 class="reveal engines"><span class="se1">Start your</span><span class="se2" data-t="ENGINES.">ENGINES.</span></h2>
+    <div class="letsrace reveal"><span class="lr-in"><span class="lr-b">LET'S</span><span class="lr-r">RACE</span></span><span class="streaks" aria-hidden="true"></span></div>
+    <p class="race-sub reveal"><span class="hw">Hardware</span> or <span class="sw">software</span> — if it's fast, I want in. Pull up to the grid.</p>
     <a class="handle reveal" href="https://github.com/jyothikiran25" target="_blank" rel="noopener">github.com/jyothikiran25</a>
     <div class="links reveal">
       <button class="btn" id="copyGh">Copy GitHub link</button>
